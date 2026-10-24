@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#b9f2df">
+<title>Esilam 💚</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@400;500;600;700&display=swap');
+:root{--mint:#b9f2df;--mint2:#78d9bd;--mint3:#247f68;--deep:#073d34;--white:#fff;--brown:#79513f}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;background:var(--deep)}
+body{margin:0;min-height:100%;font-family:'Comfortaa',system-ui,sans-serif;color:#fff;text-align:center;overflow-x:hidden;background:radial-gradient(ellipse at 50% 0%,#78d9bd 0%,#247f68 46%,#073d34 100%);background-attachment:fixed}
+body:before{content:"";position:fixed;inset:0;pointer-events:none;z-index:0;opacity:.12;background-image:radial-gradient(#fff .6px,transparent .6px);background-size:19px 19px}
+#waffle-layer,#heart-layer{position:fixed;inset:0;overflow:hidden;pointer-events:none;z-index:5}
+.waffle{position:absolute;top:-60px;font-size:clamp(25px,6vw,39px);filter:drop-shadow(0 4px 5px #073d3488);animation:waffleFall linear forwards}
+@keyframes waffleFall{0%{transform:translate3d(0,-5vh,0) rotate(0deg);opacity:0}8%{opacity:.95}88%{opacity:.9}100%{transform:translate3d(var(--drift),115vh,0) rotate(460deg);opacity:0}}
+.heart{position:absolute;bottom:-45px;color:#79513f;font-size:clamp(17px,4vw,30px);text-shadow:0 0 14px #fff8;animation:heartRise linear forwards}
+@keyframes heartRise{0%{transform:translateY(0) rotate(-15deg) scale(.7);opacity:0}12%{opacity:.8}85%{opacity:.75}100%{transform:translateY(-115vh) rotate(35deg) scale(1.15);opacity:0}}
+main{position:relative;z-index:1;width:100%;margin:auto}
+section{position:relative;min-height:100svh;display:flex;flex-direction:column;align-items:center;justify-content:center;padding:clamp(30px,7vh,72px) 18px;isolation:isolate}
+section:after{content:"";position:absolute;inset:0;z-index:-1;pointer-events:none;background:radial-gradient(ellipse at center,#ffffff09,transparent 65%)}
+.kicker{font-size:clamp(10px,2.7vw,13px);letter-spacing:.22em;text-transform:uppercase;color:#fff;margin-bottom:22px}
+h1,h2,p{margin-top:0}
+h1{font-size:clamp(37px,10vw,76px);font-weight:700;line-height:1.12;letter-spacing:-.06em;margin-bottom:18px;text-shadow:0 8px 30px #073d3466}
+h1 span{color:#79513f}
+.lead{font-size:clamp(14px,3.7vw,18px);line-height:1.9;color:#fff;max-width:570px;margin:0 auto}
+.scroll-hint{position:absolute;bottom:26px;left:0;right:0;display:flex;flex-direction:column;gap:10px;align-items:center;color:#fff;font-size:11px;letter-spacing:.12em;text-transform:uppercase;animation:hint 1.8s ease-in-out infinite}
+.scroll-hint b{font-size:24px;font-weight:400}
+@keyframes hint{50%{transform:translateY(7px);opacity:.65}}
+.reveal{opacity:0;transform:translateY(32px) scale(.98);transition:opacity .8s ease,transform .8s cubic-bezier(.2,.75,.25,1)}
+.reveal.visible{opacity:1;transform:translateY(0) scale(1)}
+h2{font-size:clamp(25px,6.8vw,48px);font-weight:700;letter-spacing:-.045em;line-height:1.28;margin-bottom:20px;text-shadow:0 6px 24px #073d3455}
+.story-copy{max-width:650px;font-size:clamp(14px,3.8vw,17px);line-height:2;color:#fff}
+.ornament{font-size:32px;color:#79513f;margin-bottom:22px}
+#ready-section{min-height:82svh}
+.photo-section{min-height:100svh;padding-left:0;padding-right:0;overflow:hidden}
+.photo-section .photo-heading{padding:0 20px}
+.photo-heading p{font-size:14px;line-height:1.8;color:#fff;max-width:540px;margin:0 auto}
+.fan{position:relative;width:100%;height:clamp(250px,63vw,440px);max-width:850px;margin:30px auto 14px;display:flex;justify-content:center;align-items:center;perspective:1000px}
+.photo-card{position:absolute;width:min(52vw,260px);height:clamp(205px,52vw,340px);border:5px solid #fff;border-bottom-width:17px;border-radius:8px;background:linear-gradient(145deg,#78d9bd,#247f68);box-shadow:0 18px 45px #073d3499;overflow:hidden;transform-origin:50% 110%;transition:transform .8s cubic-bezier(.2,.8,.2,1),filter .8s}
+.photo-card img{display:block;width:100%;height:100%;object-fit:cover}
+.photo-card .missing{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;padding:12px;color:#fff;font-size:12px;line-height:1.7;background:linear-gradient(145deg,#78d9bd,#247f68)}
+.photo-card:nth-child(1){transform:rotate(-24deg) translate(-37%,8%)}
+.photo-card:nth-child(2){transform:rotate(-12deg) translate(-19%,3%)}
+.photo-card:nth-child(3){transform:rotate(0deg) translateY(-2%);z-index:3}
+.photo-card:nth-child(4){transform:rotate(12deg) translate(19%,3%)}
+.photo-card:nth-child(5){transform:rotate(24deg) translate(37%,8%)}
+.fan.spread .photo-card:nth-child(1){transform:rotate(-27deg) translate(-49%,8%)}
+.fan.spread .photo-card:nth-child(2){transform:rotate(-14deg) translate(-25%,1%)}
+.fan.spread .photo-card:nth-child(3){transform:rotate(0deg) translateY(-5%)}
+.fan.spread .photo-card:nth-child(4){transform:rotate(14deg) translate(25%,1%)}
+.fan.spread .photo-card:nth-child(5){transform:rotate(27deg) translate(49%,8%)}
+.pill{border:1px solid #fff;background:#ffffff12;color:#fff;border-radius:999px;padding:14px 24px;font-family:inherit;font-size:13px;letter-spacing:.03em;transition:background .2s,transform .2s;cursor:pointer}
+.pill:hover{background:#ffffff24;transform:translateY(-2px)}
+.pill.primary{background:#247f68;border-color:#fff;box-shadow:0 9px 28px #073d3455}
+.pill.primary:hover{background:#176451}
+.actions{display:flex;justify-content:center;align-items:center;flex-wrap:wrap;gap:11px;margin-top:26px}
+.final-section{min-height:100svh}
+.question-mark{font-size:42px;color:#79513f;margin-bottom:18px}
+.answer-box{width:min(560px,100%);margin-top:22px;text-align:left}
+.answer-box label{display:block;font-size:11px;letter-spacing:.15em;text-transform:uppercase;color:#fff;margin:0 0 10px 4px}
+textarea{width:100%;min-height:125px;resize:vertical;border:1px solid #fff;background:#073d34aa;border-radius:16px;padding:16px;color:#fff;font:14px/1.8 'Comfortaa',sans-serif;outline:none}
+textarea::placeholder{color:#d9fff2}
+textarea:focus{border-color:#fff;box-shadow:0 0 0 3px #ffffff22}
+.status{min-height:24px;color:#fff;font-size:12px;line-height:1.7;margin-top:12px;text-align:center}
+footer{position:relative;z-index:1;padding:22px 12px 34px;color:#fff;font-size:12px}
+#success-screen{position:fixed;inset:0;z-index:9999;background:#000;display:none;align-items:center;justify-content:center;width:100vw;height:100dvh;overflow:hidden}
+#success-screen img{display:block;width:100%;height:100%;object-fit:contain}
+#error-screen{position:fixed;inset:0;z-index:10000;display:none;align-items:center;justify-content:center;padding:28px;background:#073d34;color:#fff;font-size:clamp(18px,5vw,28px);line-height:1.6}
+@media(max-width:420px){.photo-card{width:54vw;height:clamp(195px,55vw,270px);border-width:4px;border-bottom-width:13px}.fan{height:275px}.photo-section{padding-top:55px;padding-bottom:55px}.photo-card:nth-child(1){transform:rotate(-22deg) translate(-32%,8%)}.photo-card:nth-child(5){transform:rotate(22deg) translate(32%,8%)}.fan.spread .photo-card:nth-child(1){transform:rotate(-23deg) translate(-39%,8%)}.fan.spread .photo-card:nth-child(5){transform:rotate(23deg) translate(39%,8%)}}
+@media(prefers-reduced-motion:reduce){*,*::before,*::after{animation-duration:.01ms!important;transition-duration:.01ms!important;scroll-behavior:auto!important}}
+</style>
+</head>
+<body>
+<div id="waffle-layer" aria-hidden="true"></div><div id="heart-layer" aria-hidden="true"></div>
+<main id="site-content">
+<section class="welcome" id="welcome">
+  <div class="kicker">küçük bir sürpriz</div>
+  <h1>Hoşgeldin<br><span>Esilam 💚</span></h1>
+  <p class="lead">Senin için hazırladığım minicik bir şey var.<br>Acele etme… aşağı doğru kaydır. ♡</p>
+  <div class="scroll-hint"><span>yavaşça aşağı kaydır</span><b>⌄</b></div>
+</section>
+<section id="first-message"><div class="reveal" id="first-reveal">
+  <div class="ornament">🤎</div>
+  <h2>İşi Resmiyete<br>Dökme Vakti Geldi</h2>
+  <p class="story-copy">İçimde tuttuğum bir şeyi sana söylemek istiyorum.</p>
+</div></section>
+<section id="ready-section"><div class="reveal" id="ready-reveal">
+  <div class="ornament">♡</div>
+  <h2>162 Yerle Birleşik Enik Buna Hazırmısın?</h2>
+  <p class="story-copy">Enik Resimleri</p>
+</div></section>
+<section class="photo-section" id="memories">
+  <div class="photo-heading reveal" id="photo-reveal">
+    <div class="kicker">Enik Resimleri</div>
+    <h2>162 Güzeller Güzeli Eniğin Resimleri &lt;3</h2>
+  </div>
+  <div class="fan" id="fan">
+    <figure class="photo-card"><img src="resim1.png" alt="Enik resmi 1"><div class="missing">resim1.png</div></figure>
+    <figure class="photo-card"><img src="resim2.png" alt="Enik resmi 2"><div class="missing">resim2.png</div></figure>
+    <figure class="photo-card"><img src="resim3.png" alt="Enik resmi 3"><div class="missing">resim3.png</div></figure>
+    <figure class="photo-card"><img src="resim2.png" alt="Enik resmi 4"><div class="missing">resim2.png</div></figure>
+    <figure class="photo-card"><img src="resim1.png" alt="Enik resmi 5"><div class="missing">resim1.png</div></figure>
+  </div>
+  <div class="actions"><button class="pill primary" id="to-question">Devam et 💚</button></div>
+</section>
+<section class="final-section" id="question">
+  <div class="reveal" id="question-reveal">
+    <div class="question-mark">♡</div>
+    <div class="kicker">sana sormak istediğim şey</div>
+    <h2>Benimle Çıkarmısın<br>Birtanem?</h2>
+    <p class="story-copy">Cevabını merakla bekliyorum… 💚</p>
+    <div class="answer-box">
+      <label for="answer">Cevabın</label>
+      <textarea id="answer" placeholder="Cevabını buraya yazabilirsin Esilam"></textarea>
+      <div class="actions"><button class="pill primary" id="send">Gönder ♡</button></div>
+      <div class="status" id="status" role="status" aria-live="polite"></div>
+    </div>
+  </div>
+</section>
+</main>
+<footer>Senin için, bol waffle ile hazirladim bu sayfayı 💚</footer>
+<div id="success-screen" aria-label="Gönderim başarılı"><img src="sonuc.png" alt="Sonuç"></div>
+<div id="error-screen">sıkıntı var heralde cevabını instadan verirmisin..</div>
+<script>
+const waffleLayer=document.getElementById('waffle-layer'), heartLayer=document.getElementById('heart-layer');
+const reduceMotion=window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+function dropWaffle(){if(reduceMotion)return;const el=document.createElement('span');el.className='waffle';el.textContent='🧇';el.style.left=(Math.random()*100)+'vw';el.style.setProperty('--drift',((Math.random()-.5)*100)+'px');el.style.animationDuration=(5+Math.random()*5)+'s';waffleLayer.appendChild(el);setTimeout(()=>el.remove(),10500)}
+function floatHeart(){if(reduceMotion)return;const el=document.createElement('span');el.className='heart';el.textContent=Math.random()>.5?'🤎':'♡';el.style.left=(Math.random()*100)+'vw';el.style.animationDuration=(6+Math.random()*5)+'s';heartLayer.appendChild(el);setTimeout(()=>el.remove(),11500)}
+setInterval(dropWaffle,500);setInterval(floatHeart,950);
+const reveals=[document.getElementById('first-reveal'),document.getElementById('ready-reveal'),document.getElementById('photo-reveal'),document.getElementById('question-reveal')];
+function checkScroll(){reveals.forEach(el=>{const r=el.getBoundingClientRect();if(r.top<window.innerHeight*.82&&r.bottom>0)el.classList.add('visible')})}
+window.addEventListener('scroll',checkScroll,{passive:true});window.addEventListener('resize',checkScroll);setTimeout(checkScroll,100);
+const fan=document.getElementById('fan');fan.addEventListener('click',()=>fan.classList.toggle('spread'));
+document.querySelectorAll('.photo-card img').forEach(img=>{img.addEventListener('load',()=>{img.nextElementSibling.style.display='none'});img.addEventListener('error',()=>{img.style.display='none';img.nextElementSibling.style.display='flex'});if(img.complete&&img.naturalWidth>0){img.style.display='block';img.nextElementSibling.style.display='none'}});
+document.getElementById('to-question').addEventListener('click',()=>{document.getElementById('question').scrollIntoView({behavior:reduceMotion?'auto':'smooth'});setTimeout(()=>document.getElementById('question-reveal').classList.add('visible'),100)});
+document.getElementById('send').addEventListener('click',async()=>{
+ const answer=document.getElementById('answer').value.trim(), status=document.getElementById('status'), button=document.getElementById('send');
+ if(!answer){status.textContent='Önce cevabını yaz, Esilam 💚';return}
+ button.disabled=true;button.textContent='Gönderiliyor…';status.textContent='';
+ try{
+   const response=await fetch('/api/send',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({answer})});
+   if(!response.ok)throw new Error('send failed');
+   document.getElementById('success-screen').style.display='flex';
+ }catch(e){
+   document.getElementById('error-screen').style.display='flex';
+ }finally{button.disabled=false;button.textContent='Gönder ♡'}
+});
+</script>
+</body>
+</html>
